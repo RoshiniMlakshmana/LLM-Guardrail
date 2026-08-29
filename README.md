@@ -123,6 +123,34 @@ Leave this window open — the guard is now running.
 ---
 No API key is baked in — **each user supplies their own at run time.**
 ---
+## How to run the Dashboard 
+
+Run the Dashboard
+
+Open PowerShell and clone the updated repository:
+git clone https://github.com/RoshiniMlakshmana/ai-prompt-attack-detector-and-classifier.git C:\AI-Guardrail
+
+Open the dashboard folder:
+cd C:\AI-Guardrail\aac
+
+Create and activate the environment:
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+
+Install dependencies:
+python -m pip install -r requirements.txt
+
+Run the dashboard:
+python -m streamlit run dashboard.py
+Open http://localhost:8501 in your browser.
+
+<img width="893" height="503" alt="image" src="https://github.com/user-attachments/assets/775e8b77-473e-4b94-b9d4-53e7103dbb86" />
+<img width="875" height="662" alt="image" src="https://github.com/user-attachments/assets/daa882c5-afc6-45de-a206-40a53888fe51" />
+
+<img width="977" height="491" alt="image" src="https://github.com/user-attachments/assets/24fd6d1c-cbb4-4b80-ae9f-c51bfccbc913" />
+<img width="902" height="662" alt="image" src="https://github.com/user-attachments/assets/808ef4db-958f-470e-bd51-7ecb9fa169e4" />
+
+
 
 ## 🔧 How anyone can use & improve it
 
@@ -138,6 +166,8 @@ No API key is baked in — **each user supplies their own at run time.**
 - Coverage for **images / voice** (today it's text-only)
 
 ---
+
+
 
 ## ⚠️ Honest limitations
 
