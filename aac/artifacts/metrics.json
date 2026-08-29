@@ -1,0 +1,20 @@
+{
+  "n_test": 107,
+  "binary_precision": 1.0,
+  "binary_recall": 0.7875,
+  "binary_f1": 0.8811,
+  "roc_auc": 0.9944,
+  "benign_false_positive_rate@0.70": 0.2222,
+  "per_class_f1": {
+    "benign": 0.761,
+    "excessive_agency": 0.778,
+    "indirect_injection": 0.96,
+    "jailbreak": 1.0,
+    "model_extraction": 0.429,
+    "prompt_injection": 1.0,
+    "sensitive_data_probe": 0.4,
+    "system_prompt_exfil": 0.8
+  },
+  "macro_f1": 0.7659,
+  "accuracy": 0.785
+}

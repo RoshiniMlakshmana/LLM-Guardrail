@@ -1,6 +1,17 @@
 .env
 *.env
 __pycache__/
-*.pyc
+*.py[cod]
 .ipynb_checkpoints/
 .vscode/
+.pytest_cache/
+.streamlit/secrets.toml
+.venv/
+venv/
+
+# Runtime evidence is generated locally and may contain submitted prompts.
+aac/artifacts/dashboard_guardrail.db*
+aac/artifacts/guardrail.db*
+aac/artifacts/dfir_log.jsonl
+aac/.promptfoo/
+aac/promptfoo-output/

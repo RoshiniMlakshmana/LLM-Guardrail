@@ -1,0 +1,4 @@
+# Optional research/notebook dependencies. The dashboard uses the bundled
+# TF-IDF model and does not need the large transformer/PyTorch download.
+sentence-transformers>=2.2
+nbformat>=5.0
