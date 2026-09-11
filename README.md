@@ -165,15 +165,24 @@ python -c "from demo_guardrail import self_check; print(self_check())"
 
 ---
 
-## 📊 The numbers (real, not faked)
+## 📊 The numbers 
 
-- Trained on **~1,342** real attack + safe examples; tested on **549** it never saw.
-- **Precision ~98%** — when it says "attack," it's almost always right.
-- **Recall ~80%** — catches most real attacks.
-- **ROC-AUC 0.96** — strong overall.
-- **False alarms on safe messages: ~1.5%** — very low.
-- Before → after upgrades: precision **55.7% → 98.2%**, false-alarms **80.7% → 1.5%**.
-- The fine-tuned brain scored **F1 0.99** vs **0.70** for simple word-matching.
+Measured on a held-out set of **171 labelled messages** (80 attacks, 91 benign)
+the model never trained on, at the production threshold (0.55), using the shipped
+model (`artifacts/model_precision.joblib`):
+
+- **Precision 1.00** — 0 false alarms on the 91 safe messages in this set.
+- **Recall 0.94** — catches 75 of 80 attacks (misses ~6%).
+- **ROC-AUC 0.9999**, **F1 0.97**.
+
+These are **in-domain** figures on a same-distribution held-out set, not an
+independent public benchmark — treat them as in-domain performance, not a
+universal accuracy claim. Recall on novel, out-of-distribution attacks is
+expected to be lower; continuous retraining is what keeps it current (see
+Limitations).
+
+Verify: `python eval_full.py` prints these figures; `artifacts/metrics.json`
+is the committed snapshot.
 
 *(Limitations are reported honestly too — see below.)*
 
