@@ -41,12 +41,6 @@ python pipeline.py                    # Blocks 3->6 end-to-end demo
 ```
 On Colab: open `notebooks/ai_attack_classifier_colab.ipynb` and run top to bottom.
 
-## Current metrics (TF-IDF baseline, leak-free split)
-ROC-AUC ~0.99, binary precision ~0.98 / recall ~0.81, benign FPR@0.70 ~0.26.
-The semantic (sentence-transformer) encoder is expected to cut the false-positive
-rate and lift the semantically-similar classes (model_extraction, sensitive_data_probe).
-These numbers are from a small seed set — fold in JailbreakBench / AdvBench /
-HackAPrompt / PINT (same `{text,label}` schema) for honest, publishable results.
 
 ## Honest limitations
 - Seed dataset is small and partly templated; treat baseline metrics as indicative.
