@@ -1,4 +1,4 @@
-# 🛡️ AI Attack Detection Classifier — with Confidence-Gated Response
+# 🛡️ LLM-Guardrail
 
 A real-time **security guard for AI chatbots**. It reads every message going *in* and every reply going *out*, and decides: **allow, flag for a human, or block** — stopping attacks before they cause harm. Every detection is labelled with the two industry rulebooks: **OWASP LLM Top-10 (2025)** and **MITRE ATLAS**.
 
