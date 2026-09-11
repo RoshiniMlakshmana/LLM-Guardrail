@@ -16,7 +16,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from src.engine import GuardrailEngine
 
-MODEL = os.environ.get("GUARDRAIL_MODEL", "artifacts/model.joblib")
+MODEL = os.environ.get("GUARDRAIL_MODEL", "artifacts/model_precision.joblib")
 DB = os.environ.get("GUARDRAIL_DB", "artifacts/guardrail.db")
 USE_INTENT = os.environ.get("USE_INTENT", "0") == "1"
 INTENT_THR = float(os.environ.get("INTENT_THRESHOLD", "0.5"))
